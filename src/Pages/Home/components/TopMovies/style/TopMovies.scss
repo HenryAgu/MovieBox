@@ -1,0 +1,33 @@
+.top_movies {
+  width: 85%;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  h1 {
+    color: #000;
+    font-family: DM Sans;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .top_movies_content {
+    margin-top: 20px;
+    .movies_card {
+      img {
+        width: 250px;
+        height: 370px;
+      }
+      .movies_details {
+        h1 {
+          color: var(--gray-900, #111827);
+          font-family: DM Sans;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
