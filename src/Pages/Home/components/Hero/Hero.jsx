@@ -2,12 +2,12 @@
 import "./style/Hero.scss";
 
 // images
-import Logo from "./images/Logo.png";
-import Search from "./images/Search.png";
-import Menu from "./images/Menu.png";
-import tomatoes from "./images/tomatoes.png";
-import imdb from "./images/imdb.png";
-import play from "./images/play.png";
+import Logo from "../../../../assets/Logo.png";
+import Search from "../../../../assets/search.png";
+import Menu from "../../../../assets/menu.png";
+import tomatoes from "../../../../assets/tomatoes.png";
+import imdb from "../../../../assets/imdb.png";
+import play from "../../../../assets/play.png";
 
 const Hero = () => {
   return (

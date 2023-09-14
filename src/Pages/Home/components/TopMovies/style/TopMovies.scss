@@ -12,11 +12,14 @@
     line-height: normal;
   }
   .top_movies_content {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
     margin-top: 20px;
     .movies_card {
       img {
-        width: 250px;
-        height: 370px;
+        width: fit-content;
+        height: fit-content;
       }
       .movies_details {
         h1 {
@@ -26,8 +29,35 @@
           font-style: normal;
           font-weight: 700;
           line-height: normal;
+          margin: 10px 0;
+        }
+        p {
+          color: var(--gray-400, #9ca3af);
+          font-family: DM Sans;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
         }
       }
+    }
+  }
+}
+
+// Responsive starts here
+/* Small Screens */
+@media (max-width: 991px) {
+  .top_movies{
+    .top_movies_content{
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .top_movies{
+    .top_movies_content{
+      grid-template-columns: 1fr;
     }
   }
 }

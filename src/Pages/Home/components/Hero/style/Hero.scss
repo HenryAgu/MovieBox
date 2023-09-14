@@ -1,5 +1,5 @@
 .hero {
-  background-image: url(../images/Hero.png);
+  background-image: url(../../../../../assets/Hero.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -126,6 +126,7 @@
         background: var(--rose-700, #be123c);
         padding: 5px 20px;
         width: fit-content;
+        cursor: pointer;
 
         button {
           border: none;
@@ -138,6 +139,58 @@
           font-weight: 700;
           line-height: 24px; /* 171.429% */
           text-transform: uppercase;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// Responsiveness starts here
+@media (max-width: 1024px) {
+  .hero {
+    .inner_hero {
+      .hero_content {
+        h1 {
+          width: 50%;
+        }
+        p {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    .inner_hero {
+      nav {
+        align-items: start;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .left_nav {
+          img {
+            width: 80%;
+          }
+        }
+        .middle_nav {
+          width: 100%;
+        }
+        .right_nav {
+          display: none;
+        }
+      }
+      .hero_content{
+        text-align: center;
+        align-items: center;
+        h1{
+          width: 100%;
+          font-size: 25px;
+        }
+        p{
+          width: 100%;
         }
       }
     }
