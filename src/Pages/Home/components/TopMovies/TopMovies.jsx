@@ -12,7 +12,8 @@ import { NavLink } from "react-router-dom";
 const TopMovies = () => {
   const API_KEY = "0f9f81735caa1b89545e34a598f8d5bc";
   const [data, setData] = useState([]);
-  const [error, setError] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const getMovies = () => {
     axios
@@ -20,10 +21,12 @@ const TopMovies = () => {
       .then((res) => {
         setData(res.data.results);
         console.log(res.data.results);
+        setIsLoading(false);
       })
       .catch((error) => {
         setError(error);
         console.error("Error fetching movie data:", error);
+        setIsLoading(false);
       });
   };
   useEffect(() => {
@@ -33,7 +36,10 @@ const TopMovies = () => {
   return (
     <div className="top_movies">
       <h1>Top Movies</h1>
-      {data ? (
+      {isLoading ? (
+        <p>Loading...</p>
+      ): error ? (<h3>Error in fetching API</h3>) 
+      : (
         <div className="top_movies_content">
           {topMoviesData.map((data) => (
             <NavLink to={`/movie/${data.id}`}>
@@ -55,8 +61,6 @@ const TopMovies = () => {
             </NavLink>
           ))}
         </div>
-      ) : (
-        error
       )}
     </div>
   );
