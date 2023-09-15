@@ -7,3 +7,13 @@ MovieBox: Your Gateway to Cinematic Adventures! Explore the captivating world of
 - Semantic HTML5 markup
 - SCSS
 - [React](https://reactjs.org/) - JS library
+
+## Installation
+
+To run the MovieBox locally on your machine, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/your-username/moviebox.git`
+2. Navigate to the project directory: `moviebox`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your browser and visit `http://localhost:5173` to access the website.
