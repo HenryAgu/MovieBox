@@ -16,6 +16,9 @@
     grid-template-columns: repeat(4,1fr);
     gap: 30px;
     margin-top: 20px;
+    a{
+      text-decoration: none;
+    }
     .movies_card {
       img {
         width: fit-content;
